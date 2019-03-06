@@ -21,7 +21,6 @@ RUN set -eux; \
         gnupg \
         gzip \
         locales \
-        mercurial \
         net-tools \
         netcat \
         openssh-client \
@@ -90,7 +89,7 @@ RUN set -eux; \
     echo 'Defaults    env_keep += "DEBIAN_FRONTEND"' >> /etc/sudoers.d/env_keep;
 
 # Install pipenv and poetry
-RUN sudo pip install pipenv poetry
+RUN pip install pipenv poetry
 
 USER circleci
 
